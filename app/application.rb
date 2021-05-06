@@ -11,7 +11,7 @@ class Application
         resp.write item.price
       end
     else 
-      resp.write "Items only stupid"
+      resp.write ["Items only stupid"]
       req.status = 400
     end
     # binding.pry 
