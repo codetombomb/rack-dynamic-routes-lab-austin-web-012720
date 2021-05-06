@@ -14,7 +14,7 @@ class Application
       resp.write "Items only stupid"
       req.status = 400
     end
-    binding.pry 
+    # binding.pry 
     
     resp.finish
   end
