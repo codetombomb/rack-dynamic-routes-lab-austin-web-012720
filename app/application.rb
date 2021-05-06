@@ -12,7 +12,7 @@ class Application
       end
     else 
       resp.write "Items only stupid"
-      req.status_code
+      req.status = 400
     end
     binding.pry 
     
