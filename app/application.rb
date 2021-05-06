@@ -12,6 +12,7 @@ class Application
           found_item_price = item.price 
         end
         if !found_item_price
+          resp.status = 400
           resp.write "Item not found"
         else 
           resp.write found_item_price
