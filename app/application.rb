@@ -6,7 +6,7 @@ class Application
     
     if req.path.split('/')[1] == 'items'
       item_name = req.path.split('/').last 
-      found_item-price = ''
+      found_item_price = ''
       @@items.each do |item| 
         if item.name == item_name
           found_item_price = item.price 
