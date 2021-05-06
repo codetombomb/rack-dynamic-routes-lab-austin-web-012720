@@ -6,12 +6,12 @@ class Application
     
     if req.path.split('/')[1] == 'items'
       item_name = req.path.split('/').last 
-      found_item_price = ''
+      found_item_price = nil
       @@items.each do |item| 
         if item.name == item_name
           found_item_price = item.price 
         end
-        if found_item_price = ''
+        if !found_item_price
           resp.write "Item not found"
         else 
           resp.write found_item_price
