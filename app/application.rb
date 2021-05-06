@@ -5,7 +5,14 @@ class Application
     req = Rack::Request.new(env)
     
     if req.path.split('/')[1] == 'items'
-      resp.write 
+      item_name = req.path.split('/').last 
+      @@items.each do |item| 
+        if item.name == item_name
+        resp.write item.price
+      end
+    else 
+      resp.write "Items only stupid"
+      req.status_code
     end
     binding.pry 
     
