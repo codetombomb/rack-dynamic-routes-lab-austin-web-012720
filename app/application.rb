@@ -12,7 +12,7 @@ class Application
         end
       end
     else 
-      resp.write "Items only stupid"
+      resp.write "Item not found"
       resp.status = 400
     end
     # binding.pry 
